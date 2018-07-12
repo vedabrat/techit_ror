@@ -35,44 +35,41 @@ Let me know if you want other metrics with stock links or anything relevant.
   Live data for:
 </br></br>
 
+
+
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("FSLR") %>
-  <%= stocks.t %>  </br>
-  Trading at: <%= stocks.l %></br>
-  Daily change: <%= stocks.cp %></br>
-  Beta <%= stocks.beta %></br>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("VMW") %>
-  <%= stocks.t %>  </br>
-  Trading at: <%= stocks.l %></br>
-  Daily change: <%= stocks.cp %></br>
-  Beta <%= stocks.beta %></br>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("TSLA") %>
-  <%= stocks.t %>  </br>
-  Trading at: <%= stocks.l %></br>
-  Daily change: <%= stocks.cp %></br>
-  Beta <%= stocks.beta %></br>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("BA") %>
-  <%= stocks.t %>  </br>
-  Trading at: <%= stocks.l %></br>
-  Daily change: <%= stocks.cp %></br>
-  Beta <%= stocks.beta %></br>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("VEU") %>
-  <%= stocks.t %>  </br>
-  Trading at: <%= stocks.l %></br>
-  Daily change: <%= stocks.cp %></br>
-  Beta <%= stocks.beta %></br>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
 
