@@ -10,4 +10,54 @@ so i don't have the time to actually go through your code and work out the css f
 4. I like that your contact us has a little indicator to show the user that its an intractable item. however you already have an underline there. but you add a second one. get rid of one. and keep that consistency with the services title further up the page (edited)
 5. There is a lot fo redundancy here where you ask your user to input their information in order to contact you. Also. if the contact us button is a clickable item that automatically pulls up their email app. why would they need to input their information on the site? pick on and commit to it. also there is no need for each bar to have instructions there twice. I say keep the instructions that are within the bars for a cleaner look. The lines are too close between the words and the bars making it look cluttered.
 keep the same amount of spacing between the bars as well as the send button. the send button is touching the message bar.
-hope this helps! let me know if you have any other questions 
+hope this helps! let me know if you have any other questions
+
+<br><br><br><br>
+
+TICTACTOE
+<br><br><br><br>
+<tr id="row1">
+  <th ><img id="r1c1" onclick="playerMove()" src="/assets/blank.png" />
+  </th>
+  <th ><img id="r1c2" onclick="playerMove()" src="/assets/blank.png" />
+  </th>
+  <th ><img id="r1c3" onclick="playerMove()" src="/assets/blank.png" />
+  </th>
+</tr>
+<br>
+<tr id="row2">
+    <th><img id="r2c1" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+    <th><img id="r2c2" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+    <th><img id="r2c3" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+  </tr>
+<br>
+<tr id="row3">
+    <th><img id="r3c1" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+    <th><img id="r3c2" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+    <th><img id="r3c3" onclick="playerMove()" src="/assets/blank.png" />
+    </th>
+</tr>
+<br><br>
+<button id="click" onclick="resetCount()"> Play/new </button>
+
+<script>
+console.log(document.getElementById("r1c1"));
+var count = 0;
+// function resetCount(){
+//   count = 0;
+//   arr = ["r1c1", "r1c2", "r1c3", "r2c1", "r2c2", "r2c3", "r3c1", "r3c2", "r3c3"];
+//   for (var i = 0; i < arr.length ; i++){
+//     document.getElementById(arr[i]) =  "<img id="r1c1" onclick="playerMove(" r1c1")"="" src="/assets/blank.png">" ;
+//   }
+// }
+function playerMove(){
+  document.getElementById("r1c1").src = "/assets/O.png" ;
+  // (document.getElementById(id) == "<img src="/assets/blank.png" />")?(document.getElementById(id).innerHTML =  "<img src="/assets/X.png" />"; count++;):();
+}
+
+</script>
