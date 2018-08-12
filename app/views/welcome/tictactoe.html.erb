@@ -2,6 +2,10 @@
 <p>(in development)</p>
 <br><br>
 
+
+<div id="status">
+
+</div>
 <br><br><br><br>
 <tr id="row1">
   <th ><img id="1" onclick="playerMove(1)" src="../img/blank.png" />
@@ -41,7 +45,6 @@ function newGame(){
     document.getElementById(i).src = "../img/blank.png";
     grid[i-1] = 0
   }
-
 }
 // this function updates the virtual grid
 function gridupdate(){
@@ -49,17 +52,22 @@ function gridupdate(){
     grid[i] = document.getElementById(i+1).value ;
   }
 }
+function updatestatus(msg){
+  document.getElementById('status').innerHTML = msg ;
+}
 
 function playerMove(space){
   if (document.getElementById(space).src ==  "../img/blank.png"){
     if (count % 2 == 1){
       document.getElementById(space).src = "../img/X.png" ;
       document.getElementById(space).value = 2 ;
-      count++;}
+      count++;
+      updatestatus("O's turn");}
     else {
       document.getElementById(space).src = "../img/O.png" ;
       document.getElementById(space).value = 1 ;
       count++;
+      updatestatus("X's turn");
     }
     gridupdate();
   }
