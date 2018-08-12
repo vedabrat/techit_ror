@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'welcome/script'
   get 'welcome/sisterSites'
   get 'welcome/stockwatch'
+  get 'welcome/tictactoe'
   get 'welcome/ticket_handeling'
   get 'welcome/tickets'
   get 'welcome/topgolf_letsdothis'
