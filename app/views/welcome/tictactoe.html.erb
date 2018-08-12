@@ -4,29 +4,29 @@
 
 <br><br><br><br>
 <tr id="row1">
-  <th ><img id="1" onclick="playerMove(1)" src="/assets/blank.png" />
+  <th ><img id="1" onclick="playerMove(1)" src="../img/blank.png" />
   </th>
-  <th ><img id="2" onclick="playerMove(2)" src="/assets/blank.png" />
+  <th ><img id="2" onclick="playerMove(2)" src="../img/blank.png" />
   </th>
-  <th ><img id="3" onclick="playerMove(3)" src="/assets/blank.png" />
+  <th ><img id="3" onclick="playerMove(3)" src="../img/blank.png" />
   </th>
 </tr>
 <br>
 <tr id="row2">
-    <th><img id="4" onclick="playerMove(4)" src="/assets/blank.png" />
+    <th><img id="4" onclick="playerMove(4)" src="../img/blank.png" />
     </th>
-    <th><img id="5" onclick="playerMove(5)" src="/assets/blank.png" />
+    <th><img id="5" onclick="playerMove(5)" src="../img/blank.png" />
     </th>
-    <th><img id="6" onclick="playerMove(6)" src="/assets/blank.png" />
+    <th><img id="6" onclick="playerMove(6)" src="../img/blank.png" />
     </th>
   </tr>
 <br>
 <tr id="row3">
-    <th><img id="7" onclick="playerMove(7)" src="/assets/blank.png" />
+    <th><img id="7" onclick="playerMove(7)" src="../img/blank.png" />
     </th>
-    <th><img id="8" onclick="playerMove(8)" src="/assets/blank.png" />
+    <th><img id="8" onclick="playerMove(8)" src="../img/blank.png" />
     </th>
-    <th><img id="9" onclick="playerMove(9)" src="/assets/blank.png" />
+    <th><img id="9" onclick="playerMove(9)" src="../img/blank.png" />
     </th>
 </tr>
 <br><br>
@@ -34,7 +34,7 @@
 
 <script>
 var count = 1;
-var grid = [3,3,3,3,3,3,3,3,3];
+var grid = [0,0,0,0,0,0,0,0,0];
 
 function newGame(){
   for (var i = 1; i<10;i++){
@@ -51,7 +51,7 @@ function gridupdate(){
 }
 
 function playerMove(space){
-  if (document.getElementById(space).src ==  "http://techit.herokuapp.com/img/blank.png"){
+  if (document.getElementById(space).src ==  "../img/blank.png"){
     if (count % 2 == 1){
       document.getElementById(space).src = "../img/X.png" ;
       document.getElementById(space).value = 2 ;
