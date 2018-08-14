@@ -3,17 +3,23 @@
 ## Deployment instructions
 
 git clone git@github.com:vedabrat/techit_ror.git
+
 cd techit_ror
+
 bundle install
+
 rails s
 
 heroku create
+
 heroku open
 
 ## Successful System dependencies/config (so far)
 
 Ubuntu 16.04
+
 rvm
+
 rbenv
 
 
