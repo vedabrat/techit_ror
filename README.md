@@ -1,13 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Deployment instructions
 
-Things you may want to cover:
+git clone git@github.com:vedabrat/techit_ror.git
+cd techit_ror
+bundle install
+rails s
+
+heroku create
+heroku open
+
+## Successful System dependencies/config (so far)
+
+Ubuntu 16.04
+rvm
+rbenv
+
+
+Additional things to cover (TODO):
 
 * Ruby version
-
-* System dependencies
 
 * Configuration
 
@@ -18,7 +30,5 @@ Things you may want to cover:
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
