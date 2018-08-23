@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'welcome/topgolf_letsdothis'
   get 'welcome/topgolf'
   get 'welcome/value'
+  get 'welcome/VedaAnandFinancialAdvisorSurvey'
   get 'welcome/wine_budgeting'
   get 'welcome/WIPuns'
   get 'welcome/your_6_week_dev'
