@@ -35,13 +35,13 @@
 </tr>
 <br><br>
 <button id="click" onclick="newGame()"> Play/new </button>
-<button id="local" onclick="localswitch()" hidden="true">Switch to Local</button>
+<button id="local" onclick="localswitch()" hidden="false">Switch to Local</button>
 
 <script>
 var count = 1;
 var grid = [3,3,3,3,3,3,3,3,3];
 var servOrLocal = 0 ;
-var textarr = [["../img/blank.png", ".../img/blank.png", "/img/X.png", "/img/O.png"], ["http://localhost:3000/img/blank.png","http://localhost:3000/img/blank.png", "http://localhost:3000/assets/X.png", "http://localhost:3000/assets/O.png"]];
+var textarr = [["../img/blank.png", "../img/blank.png", "../img/X.png", "../img/O.png"], ["http://localhost:3000/img/blank.png","http://localhost:3000/img/blank.png", "http://localhost:3000/img/X.png", "http://localhost:3000/img/O.png"]];
 var currentArr = textarr[0];
 
 
@@ -66,7 +66,8 @@ function newGame(){
   }
   count = 1;
   (count%2==0)?(document.getElementById("textStatus").innerHTML = "Go player O"):(document.getElementById("textStatus").innerHTML = "Go player X");
-  grid = [null,null,null,null,null,null,null,null,null];
+  grid = null;
+  console.log(grid);
 }
 // this function updates the virtual grid
 function gridupdate(){
