@@ -1,29 +1,34 @@
 <h2>
-NY/NJ Guyanese Hindu Funeral Support
- </h2>
+    NY/NJ Guyanese Hindu Funeral Support
+</h2>
 <br>
-Who has died?<input type="text" name="" value="">
+How were you related to the deceased? <select class="" name="">
+<option value="immediateFamily">Immediate Family</option> <option value="relative">Relative</option>
+</select>
+<br>What is their full name? <input type="text">
+<br>
+When did they pass? <input type="text" name="" value="">
 <br>
 <button type="button" name="button" onclick="wakeShow()">Set Wake Details</button>
 <br>
 <div id="wake" hidden="true" class="">
 
-<h3>
-  Wake <br>
-</h3>
-Time:
-<input type="text" name="" value="">
-<br>
-Address:
-<input type="text" name="" value="">
-<br>
-City
-<input type="text" name="" value="">
-<br>
-State
-<input type="text" name="" value="">
-<button type="button" name="wakeset" id="wakeset" onclick="setWake()">Set</button>
-<br>
+    <h3>
+        Wake <br>
+    </h3>
+    Time:
+    <input type="text">
+    <br>
+    Address:
+    <input type="text">
+    <br>
+    City
+    <input type="text">
+    <br>
+    State
+    <input type="text">
+    <button type="button" id="wakeset" onclick="setWake()">Set</button>
+    <br>
 </div>
 
 
@@ -31,48 +36,48 @@ State
 <br>
 <div id="funeral" hidden="true" class="">
 
-<h3>
-  Funeral<br>
-</h3>
-Time:
-<input type="text" name="" value="">
-<br>
-Address:
-<input type="text" name="" value="">
-<br>
-City
-<input type="text" name="" value="">
-<br>
-State
-<input type="text" name="" value="">
-<button type="button" name="wakeset" id="funeralSet" onclick="setFuneral()">Set</button>
-<br>
+    <h3>
+        Funeral<br>
+    </h3>
+    Time:
+    <input type="text">
+    <br>
+    Address:
+    <input type="text">
+    <br>
+    City
+    <input type="text">
+    <br>
+    State
+    <input type="text">
+    <button type="button" id="funeralSet" onclick="setFuneral()">Set</button>
+    <br>
 </div>
 
 They are
 <select class="selector" name="religion">
-  <option value="Arya Samaj">Arya Samaji</option>
-  <option value="Sanatan">Sanatan</option>
+    <option value="Arya Samaj">Arya Samaji</option>
+    <option value="Sanatan">Sanatan</option>
 </select>
 <br>
 <br>
 pick a Pandit
-<button type="button" name="availPandits" id="availPandits" onclick="availPanditShow()">Show available pandits</button>
+<button type="button" id="availPandits" onclick="availPanditShow()">Show available pandits</button>
 <div id="panditsAvailable" hidden="true">
 
 </div>
 <button onclick="panditopen()" type="button" name="button"> Add yourself as a Pandit </button>
 <div id="pandit" hidden=true>
 
-  <br>Name:<input type="text" id="panditname" value="">
-  <br>Number:<input type="text" name="panditnumber" id="panditnumber" value="">
-  <br>Type:
-  <select class="selector" name="religion" id="panditType">
-    <option value="Sanatan">Sanatan</option>
-    <option value="Arya Samaj">Arya Samaj</option>
-  </select>
-  <br>Address:<input type="text" name="Address" value="">
-  <button type="button" id="panditaddbutton" onclick="panditadd()">Add Me</button>
+    <br>Name:<input type="text" id="panditname">
+    <br>Number:<input type="text" id="panditnumber">
+    <br>Type:
+    <select class="selector" name="religion" id="panditType">
+        <option value="Sanatan">Sanatan</option>
+        <option value="Arya Samaj">Arya Samaj</option>
+    </select>
+    <br>Address:<input type="text" id="panditAddress">
+    <button type="button" id="panditaddbutton" onclick="panditadd()">Add Me</button>
 </div>
 
 <br>
@@ -81,13 +86,13 @@ pick your musicians
 
 <button type="button" name="musicianadd" onclick="musicianopen()">Add yourself as a musician</button>
 <div class="" id="music" hidden="true">
-<br>Name:<input type="text" name="musicianname" id="musicianname" value="">
-<br>Number:<input type="text" name="musiciannum" id="musiciannumber" value="">
-<br>address: <input type="text" name="" value="">
-<br>Instrument:<input type="text" name="instrument" value="" id="musicianinstrument">
-<br>Yrs Exp <input type="text" name="exp" value="" id="musicianyearsexp">
-<button type="button" onclick="addmusician()" name="button">Add Me</button>
-<button type="button" name="view" hidden="true" id="musicianarray">Musician view</button>
+    <br>Name:<input type="text" id="musicianname">
+    <br>Number:<input type="text" id="musiciannumber">
+    <br>Address: <input type="text" id="musicianAddress">
+    <br>Instrument:<input type="text" id="musicianinstrument">
+    <br>Yrs Exp <input type="text" name="exp" id="musicianyearsexp">
+    <button type="button" onclick="addmusician()" name="button">Add Me</button>
+    <button type="button" name="view" hidden="true" id="musicianarray">Musician view</button>
 </div>
 <div class="" id="musicppl">
 
@@ -97,20 +102,17 @@ pick your food places <button type="button" name="catererfood">Add to cater food
 <br>
 Pick a host/speaker
 <br>
-When did they die
-<br>
 who is hosting the wake? What days will the wake be held?
 <br>
 Who should we alert?
 <br>
-
-
 <script type="text/javascript">
 
 var musicianinfo = [];
 var musicianCount = 0;
 var pandit = [];
 var panditcount = 0;
+
 function panditopen(){
   document.getElementById('pandit').hidden = false;
 }
@@ -139,6 +141,7 @@ function expand(){
   (document.getElementById('valsnotes').hidden == false)?(document.getElementById('valsnotes').hidden = true):(document.getElementById('valsnotes').hidden = false);
 }
 function developer(){
+
 }
 developer();
 function availPanditShow(){
@@ -149,10 +152,9 @@ function availPanditShow(){
     }else{
       document.getElementById('panditsAvailable').hidden = false;
     }
-
 }
 function addmusician(){
-      musicianinfo[musicianCount] += document.getElementById('musicianname').value;
+      musicianinfo[musicianCount] += [document.getElementById('musicianname').value];
       musicianCount++;
       console.log (musicianinfo);
       document.getElementById('music').hidden = true;
@@ -165,12 +167,8 @@ function musicianshow(){
   }else{
     document.getElementById('musicppl').hidden = false;
   }
-
 }
 
-</script>
-
-<script type="text/javascript">
 var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 document.write(utc);
 </script>

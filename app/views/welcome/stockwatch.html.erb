@@ -72,11 +72,22 @@ Let me know if you want other metrics with stock links or anything relevant.
   Daily change: <%= stocks.change %></br>
   </br></br>
   <!--  Stock Template End -->
-
+Enter Ticker<input type="text" id="stockname" value=""><button type="button" id="update" onclick="stockvar()">Update</button>
+  <% stocks = StockQuote::Stock.quote("VEU") %>
+  <%= stocks.symbol %>  </br>
+  Trading at: <%= stocks.latest_price %></br>
+  Daily change: <%= stocks.change %></br>
+  </br></br>
 
 
 </p>
+<script type="text/javascript">
+function stockvar(){
 
+  var stub = document.getElementById('stockname').value;
+}
+
+</script>
 
 
 
@@ -86,7 +97,14 @@ Let me know if you want other metrics with stock links or anything relevant.
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
+Pick a stock <input type="text" id="stockSelection" value="">
+
+Revenue
+
 <script>
+
+
+
 document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
 </script>
