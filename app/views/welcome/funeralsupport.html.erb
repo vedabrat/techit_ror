@@ -106,6 +106,8 @@ who is hosting the wake? What days will the wake be held?
 <br>
 Who should we alert?
 <br>
+<br>
+Comment? (your comments help us improve this site.)
 <script type="text/javascript">
 
 var musicianinfo = [];
@@ -154,10 +156,10 @@ function availPanditShow(){
     }
 }
 function addmusician(){
-                                              musicianinfo[musicianCount] += [document.getElementById('musicianname').value, document.getElementById(' ').value, ];
-      musicianCount++;
-      console.log (musicianinfo);
-      document.getElementById('music').hidden = true;
+    [musicianCount] += [document.getElementById('musicianname').value, document.getElementById(' ').value, ];
+    musicianCount++;
+    console.log (musicianinfo);
+    document.getElementById('music').hidden = true;
 }
 function musicianshow(){
   document.getElementById('musicppl').innerHTML = musicianinfo;
@@ -168,7 +170,4 @@ function musicianshow(){
     document.getElementById('musicppl').hidden = false;
   }
 }
-
-var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-document.write(utc);
 </script>
