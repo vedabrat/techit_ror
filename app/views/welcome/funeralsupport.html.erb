@@ -107,13 +107,22 @@ who is hosting the wake? What days will the wake be held?
 Who should we alert?
 <br>
 <br>
-Comment? (your comments help us improve this site.)
-<script type="text/javascript">
+Have a comment or suggestion? <br>
 
+<input type="commentbox" id="" placeholder="(Your comments help us help you.)" value=""> <button  onclick="commentAdd()" type="button" name="button">Submit</button>
+<div id="commentbox">
+</div>
+<script type="text/javascript">
 var musicianinfo = [];
 var musicianCount = 0;
 var pandit = [];
 var panditcount = 0;
+var commentcount = 0;
+var comments = [];
+
+function commentAdd(){
+
+}
 
 function panditopen(){
   document.getElementById('pandit').hidden = false;
