@@ -109,9 +109,14 @@ Who should we alert?
 <br>
 Have a comment or suggestion? <br>
 
-<input type="commentbox" id="" placeholder="(Your comments help us help you.)" value=""> <button  onclick="commentAdd()" type="button" name="button">Submit</button>
+<input type="box" id="userComment" placeholder="(Your comments help us help you.)" value=""> <button  onclick="commentAdd()" type="button" name="button">Submit</button>
+<table>
 <div id="commentbox">
+
+
+
 </div>
+</table>
 <script type="text/javascript">
 var musicianinfo = [];
 var musicianCount = 0;
@@ -121,8 +126,24 @@ var commentcount = 0;
 var comments = [];
 
 function commentAdd(){
+  // if the text in the comment box is blank, dont register it
+  // ((document.getElementById('userComment').value != "") || (document.getElementById('userComment').value != undefined) )?(comments[commentcount] += document.getElementById('userComment').value &&
+  // commentcount++):()
+  for (var i = 0; i < comments.length ; i++){
+    // comments[i] will output the html of what i am going to list.  ill list.
+    (document.getElementById('commentbox').innerHTML += "<br>"
++    <th>
++      "<tr>"
++        comments[i]
++  "    </tr>"
++    "</th>"
 
+  }
 }
+
+function commentShow(){
+}
+
 
 function panditopen(){
   document.getElementById('pandit').hidden = false;

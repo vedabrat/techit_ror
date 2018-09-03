@@ -2,13 +2,13 @@
     <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
     <meta name=Generator content="Microsoft Word 14 (filtered)">
     <style>
-        < !--
         /* Font Definitions */
         @font-face {
+          < !--
             font-family: Cambria;
             panose-1: 2 4 5 3 5 4 6 3 2 4;
-        }
 
+          }
         @font-face {
             font-family: Calibri;
             panose-1: 2 15 5 2 2 2 4 3 2 4;
@@ -39,9 +39,9 @@
             padding: 0in;
             font-size: 26.0pt;
             font-family: "Cambria", "serif";
-            color: #17365D;
             letter-spacing: .25pt;
         }
+        color: #17365D;
 
         p.MsoTitleCxSpFirst,
         li.MsoTitleCxSpFirst,
@@ -115,6 +115,18 @@
 </head>
 
 <body lang=EN-US>
+<p id="secretext" onclick="developerOpen()"></p>
+<script>
+function developer(){
+  document.getElementById("secretext").innerText = "https://getsimpleform.com/messages?api_token=b554499b27cc6e6d908ef914dea3fbc7";
+  document.getElementById("secretext").innerText = "https://getsimpleform.com/messages?api_token=b554499b27cc6e6d908ef914dea3fbc7";
+
+}
+function developerOpen(){  
+  window.open("https://getsimpleform.com/messages?api_token=b554499b27cc6e6d908ef914dea3fbc7");
+}
+
+</script>
 <form action="https://getsimpleform.com/messages?form_api_token=42e4f12338e3a9d957a31fa298211e13" method="post">
     <!-- <input type='text' name='test' /> -->
 
@@ -139,20 +151,14 @@
         }
 
         today = mm + '/' + dd + '/' + yyyy;
-return(today);                }
-document.getElementById('datae').placeholder = getdate();
-document.getElementById('datae').value = getdate();
-                </script>
+        return(today);                }
+        document.getElementById('datae').placeholder = getdate();
+        document.getElementById('datae').value = getdate();
+                        </script>
  </p>
-<p id="secretext"></p>
-<script>
-function developer(){
-  document.getElementById("secrettext").innerHTML = "https://getsimpleform.com/messages?api_token=b554499b27cc6e6d908ef914dea3fbc7" ;
-}
-</script>
         <div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
 
-            <p class=MsoTitle>Market Information Survey</p>
+            <p class=MsoTitle>Market Information <span onclick=developer()>Survey</span></p>
 
         </div>
 
@@ -300,9 +306,15 @@ function developer(){
             would be willing to introduce me as simply a person they could trust and who
             might be a good resource for them at some point?</p>
 
-        <p class=MsoNormal>&nbsp;</p>
 
-        <p class=MsoNormal>&nbsp;</p>
+        <i><b><p class=MsoNormal>Suggestions to help you think of people:</p>
+        </i></b>
+        <p class=MsoNormal><i>Best friends <br>
+        Most Successful business owners<br>
+        Finest Accountants, Attorneys, Physicians<br>
+        Best Bankers, Salespeople<br>
+        The one person who just seems to know everyone<br>
+        People you feel are really on a success track</i></p>
 
         <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
             <tr>
@@ -922,15 +934,6 @@ function developer(){
                 </td>
             </tr>
         </table>
-
-        <p class=MsoNormal>POSSIBLE CATEGORIES TO FEED:</p>
-
-        <p class=MsoNormal><i>Best friends <br>
-                Most Successful business owners<br>
-                Finest Accountants, Attorneys, Physicians<br>
-                Best Bankers, Salespeople<br>
-                The one person who just seems to know everyone<br>
-                People you feel are really on a success track</i></p>
 
     </div>
     <input type='submit' value='Submit!' /> </form>
