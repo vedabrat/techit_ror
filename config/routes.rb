@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'welcome/about'
   get 'welcome/clicker'
   get 'welcome/CreditCardSystem'
+  get 'welcome/directory'
   get 'welcome/funeralsupport'
   get 'welcome/grow'
   get 'welcome/ideas'
