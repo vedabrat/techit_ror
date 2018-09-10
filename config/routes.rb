@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/about'
+  get 'welcome/beer'
   get 'welcome/clicker'
   get 'welcome/CreditCardSystem'
   get 'welcome/directory'

@@ -1,0 +1,66 @@
+<h1>Moongaizer Beer</h1>
+
+
+Register for a tasting of Ricky and <span onclick="developer()">
+  Anand's
+</span>
+latest batch.
+<br><br>
+
+<span id="formdeets" hidden="true"> <a href="https://getsimpleform.com/messages?api_token=5a61620f67ba6fac20caaa429f52641a"></a>
+</span>
+<form action="https://getsimpleform.com/messages?form_api_token=5dbeeac01e72289d2a3b3b335391d815" method="post">
+
+<table>
+
+  First Name: <input class="form-control" type="text" id="fname" placeholder="John"> <br>
+  Last Name: <input class="form-control" type="text" id="lname" placeholder="Smith"> <br>
+  Address: <input class="form-control" type="text" id="address" placeholder="87 Yale Avenue"> <br>
+  Apt#: <input class="form-control" type="text" id="apt" placeholder="A23"> <br>
+  City: <input class="form-control" type="text" id="city" placeholder="Jersey City"> <br>
+  State: <input class="form-control" type="text" id="state" placeholder="NJ"> <br>
+  Zip: <input class="form-control" type="text" id="zip" placeholder="07304"> <br>
+  Phone: <input class="form-control" type="text" id="phone" placeholder="2012048791"> <br>
+  Email: <input class="form-control" type="text" id="email" placeholder="ComeDrinkBeer@gmail.com"> <br>
+  Birthday: <input class="form-control" type="text" id="bday" placeholder="10/22/1987"> <br>
+  <input class="btn btn-success btn-lg" type="submit" onclick="register()" placeholder="Register"></input> <br>
+</table>
+</form>
+
+<div id="registrants" hidden="false">
+</div>
+
+<div id="count" hidden="false">
+</div>
+
+
+<script type="text/javascript">
+var regList = [];
+var count = 0;
+var formArr = ["fname", "lname", "address", "apt", "city", "state", "zip", "phone", "email", "bday"];
+
+function developer(){
+  document.getElementById("registrants").hidden = false;
+  document.getElementById("formdeets").hidden = false;
+
+}
+
+
+function register(){
+  var entry = [];
+  for (var i = 0; i<9;i++){
+    entry[i] = "";
+    entry[i] += document.getElementById(formArr[i]).value;
+    entry[i].substring(8) = entry[i];
+  }
+
+  console.log (entry);
+  regList[count] += entry;
+  count ++;
+  entry = [];
+  alert("Thanks for registering! We'll let you know by phone or email when you can come by!")
+  document.getElementById('registrants').innerHTML = regList;
+  document.getElementById('count').innerHTML = count;
+}
+
+</script>
