@@ -44,78 +44,18 @@ Natalie Valcourts notes
 <br>
 <span>
   <h4>David Owes</h4>
-  <!-- to do the calculation -->
-  <!-- i take note of last calculated amount( 6027, on August 3) -->
-  <!-- i count one week ahead to the next friday. (august 10) -->
-  <!-- <br> The last reported balance of $<span id="amount"></span> was on
-  <span id="date"></span>.
-  <button type="button" name="button" onclick="nextWeek()">Next Week</button>
-  <br>
-  $<span id="payment"></span> is expected on
-
-  <span id="newdate"></span>. Did he pay?
-  <button type="button" name="button" onclick="paid()">Paid</button> -->
-  <!-- if David has paid, 200 dollars is subtracted from the.parse initial amount. 6027 - 200 = z -->
-  <!-- <button type="button" name="button" onclick="noPayment()">Unpaid</button> -->
-  <!-- if david has not made a payment by this date, i take the 200 dollars he would have paid me -->
-  <!-- calculate how long it will take to repay me (6027/200=x) and see that that is the interest rate. -->
-  <!-- at 30% a year, he missed out on one week(30% *x)*200 = y. -->
-  <!-- to find out the amount of money he has accrued by not making this payment, he has to pay y additional dollars. -->
-  <!-- <p id="statement"></p> -->
-  <!-- State if the date has been paid or unpdaid. State how much dollars in interest (y) was added. -->
-  <!-- State the next expected payment of 200$ to be expected by(current date + 7), and what the total current balance is (amount+y OR amount-200). -->
 <br>
   Enter the current balance and hit calculate to find <br> the interest David owes for the following week. <input type="text" id="yourcalc"></input>
   <button type="oncalc" name="button" onclick="intCalc()">Calculate</button>
   <script>
-    // var aa = new Date("August 3, 2018").toJSON().slice(0, 10);
-    // document.getElementById("date").innerHTML = aa ;
-    // var initAmount = 6027.48;
-    // var payment = 200;
-    // var daysToNextPayment = -Date.parse(aa)+Date.parse("August 10, 2018") ; // this equals 7 days
-    // var newdate = new Date(Date.parse(aa)+daysToNextPayment);
-    // var interest = .3;
-    // document.getElementById("payment").innerHTML = payment;
-    // document.getElementById("amount").innerHTML = initAmount;
-    // document.getElementById("newdate").innerHTML = newdate.toJSON().slice(0, 10) ;
-    // function noPayment(){
-    //   var howLongTillRepay = initAmount/payment/52;
-    //   var interestApplied = howLongTillRepay*(interest)*payment;
-    //   console.log (interestApplied);
-    //   var statement = "Previous balance of " + initAmount + " increased by " + interestApplied + ". Expecting " + payment + " on ";
-    //   document.getElementById("statement").innerHTML = statement;
-    // }
-    // function paid(){
-    //   var statement = "Payment received. Expecting " + payment + " on " + ". Your current balance is " + (initAmount - payment) ;
-    //   document.getElementById("statement").innerHTML = statement;
-    // }
-    // function nextWeek(){
-    // }
 // you so dumb all you wanted was something simple
     function intCalc(){
       var x = Number(document.getElementById("yourcalc").value) + Number(document.getElementById("yourcalc").value/200/52*0.3*200) ;
       document.getElementById("yourcalc").value = x;
       document.getElementById("again").hidden = false;
     }
-
-
   </script>
-
-
-
-
-
 </span>
-
-<div class="blogpost" hidden="false" id='davidowes'>
-    payment dates array = [august3+7]
-
-    August 3
-    6027.48
-
-</div>
-
-
 <script>
     function expand() {
         (document.getElementById('valsnotes').hidden == false) ? (document.getElementById('valsnotes').hidden = true) : (document.getElementById('valsnotes').hidden = false);

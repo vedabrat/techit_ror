@@ -1,18 +1,17 @@
-<h1> Stocks to keep an eye on</h1>
-
+<h1>Stock related repos</h1>
+<button type="button" onclick="unhide()" name="button">Show the old stuff</button>
+<div id="oldstuff" class="module" hidden="true">
 <p style="margin-bottom: 0in; line-height: 100%">Started : Feb 9, 2018.<br/>
   Updated : Feb 13, 2018.
 </p>
 <p style="margin-bottom: 0in; line-height: 100%">
   <%= link_to "Certain Stocks are recession proof and depression proof.", "https://www.investopedia.com/articles/fundamental-analysis/09/recession-proof-industries.asp" %>
-
   <br />
 Here's a collected list of stocks we can keep an eye on. <br/>
 Let me know if you want other metrics with stock links or anything relevant.
 </p>
 <p style="margin-bottom: 0in; line-height: 100%"></p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
-
 </p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 	<form action="https://getsimpleform.com/messages?form_api_token=b83fe0c887136349bbccf84ea8b5656c" method="post">
@@ -22,7 +21,6 @@ Let me know if you want other metrics with stock links or anything relevant.
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
   <input type='text' name='Ticker' /><br />
   Suggested buy in price: <br />
-
   <input type='text' name='Suggested buy in' /><br />
   <div id="instancedate" style="{display:none;}">
 	<input type='text' name='Date' id="date"/>
@@ -34,9 +32,6 @@ Let me know if you want other metrics with stock links or anything relevant.
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
   Live data for:
 </br></br>
-
-
-
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("FSLR") %>
   <%= stocks.symbol %>  </br>
@@ -78,33 +73,144 @@ Enter Ticker<input type="text" id="stockname" value=""><button type="button" id=
   Trading at: <%= stocks.latest_price %></br>
   Daily change: <%= stocks.change %></br>
   </br></br>
-
-
 </p>
-<script type="text/javascript">
+</div>
+</div>
+<script>
 function stockvar(){
-
   var stub = document.getElementById('stockname').value;
 }
-
 </script>
-
-
-
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
-
 </p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
-
 </p>
 Pick a stock <input type="text" id="stockSelection" value="">
-
 Revenue
-
 <script>
-
-
-
 document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+</script>
+<div class="module">
+</div>
+</div>
+<div id="intrinsicCalc" >
+  Operating cash flow yr 1 <input id="opercf1" type="text" name="" value="">
+  <br>
+  Operating cash flow yr 2 <input id="opercf2" type="text" name="" value="">
+  <br>
+  Operating cash flow yr 3 <input id="opercf3" type="text" name="" value="">
+  <br>Operating Cash flow average <span id="OpCfAvg"></span>
+  <br>
+  Cost of equity <input id="costofe" type="text" name="" value="">
+  <br>
+  Growth <input id="growth" type="text" name="" value="">
+  <br> Discount Rate
+<span id="discountrate">
+</span>
+  <br>Enterprise Value
+<span id="enterprisevalue">
+</span>
+  <br>
+  Long Term Debt <input id="longtermdebt" type="text" name="" value="">
+  <br>
+    Operating Lease <input id="operatinglease" type="text" name="" value="">
+  <br>Debt + Lease Liability
+<span id="debtleaseobligation">
+</span>
+<br>
+    Tax Rate <input id="taxrate" type="text" name="" value="">
+    <br>
+    Interest <input id="interest" type="text" name="" value="">
+    <br>
+    Years of Tax Shield <input id="yearsoftaxshield" type="text" name="" value="">
+  <br>Tax Shield Value
+<span id="taxshieldvalue">
+</span>
+  <br>Net Present Value
+<span id="npv">
+</span>
+  <br>
+    Shares (in millions) <input id="sharesinmillions" type="text" name="" value="">
+  <br>Intrinsic Value
+<span id="intrinsicvalue">
+</span>
+  <br>
+    Current Price <input id="currentprice" type="text" name="" value="">
+    <br>Safety Margin
+  <span id="safetymargin">
+  </span>
+    <br>
+</div>
+<script>
+  var OperCf1 = 2498728;
+  var OperCf2 = 1935306;
+  var OperCf3 = 2251233;
+  document.getElementById('opercf1').value = OperCf1;
+  document.getElementById('opercf2').value = OperCf2;
+  document.getElementById('opercf3').value = OperCf3;
 
+  function getAvg(grades) {  return grades.reduce(function (p, c) {    return p + c;  }) / grades.length;}
+
+  var operCfAvg = getAvg([OperCf1, OperCf2, OperCf3]);
+  console.log ("This is the Average cash flow. should be 2,228,422");
+  document.getElementById('OpCfAvg').innerText = operCfAvg;
+
+  var costOfEquity = .14;
+  document.getElementById('costofe').value = costOfEquity;
+  var growth = .00; //can increment by .01 percent
+  document.getElementById('growth').value = growth;
+  var discountRate = costOfEquity - growth;
+  document.getElementById('discountrate').innerText = discountRate;
+
+  var enterpriseValue = operCfAvg/discountRate;
+  document.getElementById('enterprisevalue').innerText = enterpriseValue;
+
+  var ltDebt = 3086200;
+  document.getElementById('longtermdebt').value = ltDebt;
+
+  var operatingLease = 0;
+  document.getElementById('operatinglease').value = operatingLease;
+
+  var debtLeaseObligation = -1*(ltDebt + operatingLease);
+  document.getElementById('debtleaseobligation').innerText = debtLeaseObligation;
+  console.log ("This is the debt/lease obligation. should be 3086200");
+  console.log (debtLeaseObligation);
+
+  var taxRate = .34;
+  document.getElementById('taxrate').value = taxRate;
+  var interest = 134554;
+  document.getElementById('interest').value = interest;
+  var yrsOfTaxShield = 5;
+  document.getElementById('yearsoftaxshield').value = yrsOfTaxShield;
+
+  var taxShieldValue = (taxRate*interest/costOfEquity)*(1-(1/Math.pow((1+costOfEquity),yrsOfTaxShield)))
+  document.getElementById('taxshieldvalue').innerText = taxShieldValue;
+  console.log ("This is the tax shield Value. should be 157058");
+  console.log (taxShieldValue);
+
+  var npv = enterpriseValue + debtLeaseObligation + taxShieldValue;
+  document.getElementById('npv').innerText = npv;
+  console.log ("This is the NPV. should be 12988160");
+  console.log (npv);
+
+  var sharesInMil = 314.03;
+  document.getElementById('sharesinmillions').value = sharesInMil;
+  var intrinsicVal = (npv/sharesInMil)/1000;
+  document.getElementById('intrinsicvalue').innerText = intrinsicVal;
+
+  console.log ("This is the intrinsicValue. should be 41.36");
+  console.log (intrinsicVal);
+
+  var currentPrice = 39.08;
+  document.getElementById('currentprice').value = currentPrice;
+
+  var safetyMargin = intrinsicVal/currentPrice-1;
+  document.getElementById('safetymargin').innerText = safetyMargin;
+
+  console.log ("This is the safety margin. should be .06");
+  console.log (safetyMargin);
+
+  function unhide(){
+      (document.getElementById('oldstuff').hidden == false)? (document.getElementById('oldstuff').hidden = true): (document.getElementById('oldstuff').hidden = false) ;
+  }
 </script>
