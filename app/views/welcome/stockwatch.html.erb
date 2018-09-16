@@ -142,9 +142,12 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
     <br>
 </div>
 <script>
+function work(){
+
   var OperCf1 = 2498728;
   var OperCf2 = 1935306;
   var OperCf3 = 2251233;
+
   document.getElementById('opercf1').value = OperCf1;
   document.getElementById('opercf2').value = OperCf2;
   document.getElementById('opercf3').value = OperCf3;
@@ -209,6 +212,7 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
 
   console.log ("This is the safety margin. should be .06");
   console.log (safetyMargin);
+}
 
   function unhide(){
       (document.getElementById('oldstuff').hidden == false)? (document.getElementById('oldstuff').hidden = true): (document.getElementById('oldstuff').hidden = false) ;
