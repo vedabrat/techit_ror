@@ -1,6 +1,19 @@
 <h1>Welcome#about</h1>
 <p>Find me in app/views/welcome/about.html.erb</p>
 
+<h1> Mechanize gem output </h1>
+<% require 'mechanize'
+
+mechanize = Mechanize.new
+
+page = mechanize.get('http://stackoverflow.com/')
+
+puts page.title %>
+
+
+<br>
+-----
+<br>
 
 Natalie Valcourts notes
 <button type="button" onclick="expand()" name="expand">Expand</button>
