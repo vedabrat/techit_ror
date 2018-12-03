@@ -87,6 +87,17 @@ header .intro-text .name {
   font-weight: 700;
   font-size: 2em;
 }
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;

@@ -1,8 +1,42 @@
-<h1>Stock related repos</h1>
-<button type="button" onclick="unhide()" name="button">Show the old stuff</button>
+<h1 style="center">Stock related repos</h1>
+<h6>
+  <p style="margin-bottom: 0in; line-height: 100%" size="50%">2.9.2018-12.2,2018 (most recent update)<br/>
+
+    <a href="https://github.com/vedabrat/techit_ror/tree/Stocks">View Commit History</a>
+  </h6>
+<button type="button" name="button" onclick="hide()">TODO</button>
+<button type="button" onclick="unhide()" name="button">Show/hide the stocklist</button>
+  <div id="TODO" hidden='true'>
+    <input type="text" id="2du" name="" value="">
+    <script type="text/javascript">
+      var freeitem = "";
+      var toDoItems = [] ;
+
+      function addTODO(){
+        // document.getElementById('2du').value = freeitem;
+        console.log (freeitem);
+        console.log (toDoItems);
+        console.log (toDoItems.length);
+        console.log ("is now set");
+        // (freeitem == "")?( ):(freeitem = toDoItems.length + ". " + freeitem +" <br> " );
+        //returns a line that is textually formatted for the html conversion
+        // if the blow code is right.. we'll  see free item
+        // document.getElementById('todoITEMS').innertext = toDoItems ;
+
+      }
+
+    </script>
+    <button type="button" name="button" onclick="addTODO()">ADD (broken function)</button><br>
+      <div id="todoITEMS" >
+        1.Create a free column to the left of each line of data<br>
+        2. Style the items to have a better look and feel. <br>
+
+      </div>
+
+
+  </div>
 <div id="oldstuff" class="module" hidden="true">
-<p style="margin-bottom: 0in; line-height: 100%">Started : Feb 9, 2018.<br/>
-  Updated : Feb 13, 2018.
+
 </p>
 <p style="margin-bottom: 0in; line-height: 100%">
   <%= link_to "Certain Stocks are recession proof and depression proof.", "https://www.investopedia.com/articles/fundamental-analysis/09/recession-proof-industries.asp" %>
@@ -28,10 +62,21 @@ Let me know if you want other metrics with stock links or anything relevant.
 </p>
 	<input type='submit' value='Submit.' />
 </form>
+
 </p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
   Live data for:
 </br></br>
+  <!--  First Stock Teplate-->
+  <%= stocks = StockQuote::Stock.financials("AAPL") %>
+<br><br>  <%= stocks.financials.methods %>  </br>
+<!--  at least this area here lets me get to the quarterly statements... i have to figure out how to get to the annual statements.. thats what i need.
+https://iextrading.com/developer/docs/#financials is the resource for all the extentions i need...
+there are many more values in this system that i need to be able to pull at a moment's glance.. keep working on this. 
+-->
+  </br></br>
+  <!--  Stock Template End -->
+
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("FSLR") %>
   <%= stocks.symbol %>  </br>
@@ -93,54 +138,61 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
 <div class="module">
 </div>
 </div>
-<div id="intrinsicCalc" >
-  Operating cash flow yr 1 <input id="opercf1" type="text" name="" value="">
-  <br>
-  Operating cash flow yr 2 <input id="opercf2" type="text" name="" value="">
-  <br>
-  Operating cash flow yr 3 <input id="opercf3" type="text" name="" value="">
-  <br>Operating Cash flow average <span id="OpCfAvg"></span>
-  <br>
-  Cost of equity <input id="costofe" type="text" name="" value="">
-  <br>
-  Growth <input id="growth" type="text" name="" value="">
-  <br> Discount Rate
-<span id="discountrate">
-</span>
-  <br>Enterprise Value
-<span id="enterprisevalue">
-</span>
-  <br>
-  Long Term Debt <input id="longtermdebt" type="text" name="" value="">
-  <br>
-    Operating Lease <input id="operatinglease" type="text" name="" value="">
-  <br>Debt + Lease Liability
-<span id="debtleaseobligation">
-</span>
-<br>
-    Tax Rate <input id="taxrate" type="text" name="" value="">
-    <br>
-    Interest <input id="interest" type="text" name="" value="">
-    <br>
-    Years of Tax Shield <input id="yearsoftaxshield" type="text" name="" value="">
-  <br>Tax Shield Value
-<span id="taxshieldvalue">
-</span>
-  <br>Net Present Value
-<span id="npv">
-</span>
-  <br>
-    Shares (in millions) <input id="sharesinmillions" type="text" name="" value="">
-  <br>Intrinsic Value
-<span id="intrinsicvalue">
-</span>
-  <br>
-    Current Price <input id="currentprice" type="text" name="" value="">
-    <br>Safety Margin
-  <span id="safetymargin">
-  </span>
-    <br>
-</div>
+      <div id="intrinsicCalc" >
+        Note: things that need updating. Live numbers to be updated.
+        update stock metrics button needs a function.<br>
+        numbers need to be formatted better
+        <input type="text" name="changeStock" value="" placeholder="Enter Stock Here">
+        <button type="button" name="button" onclick="" >Update Stock Metrics</button>
+
+        <br>
+        Operating cash flow yr 1 <input id="opercf1" type="number" name="" value="">
+        <br>
+        Operating cash flow yr 2 <input id="opercf2" type="text" name="" value="">
+        <br>
+        Operating cash flow yr 3 <input id="opercf3" type="text" name="" value="">
+        <br>Operating Cash flow average <span id="OpCfAvg"></span>
+        <br>
+        Cost of equity <input id="costofe" type="text" name="" value="">
+        <br>
+        Growth <input id="growth" type="text" name="" value="">
+        <br> Discount Rate
+      <span id="discountrate">
+      </span>
+        <br>Enterprise Value
+      <span id="enterprisevalue">
+      </span>
+        <br>
+        Long Term Debt <input id="longtermdebt" type="text" name="" value="">
+        <br>
+          Operating Lease <input id="operatinglease" type="text" name="" value="">
+        <br>Debt + Lease Liability
+      <span id="debtleaseobligation">
+      </span>
+      <br>
+          Tax Rate <input id="taxrate" type="text" name="" value="">
+          <br>
+          Interest <input id="interest" type="text" name="" value="">
+          <br>
+          Years of Tax Shield <input id="yearsoftaxshield" type="text" name="" value="">
+        <br>Tax Shield Value
+      <span id="taxshieldvalue">
+      </span>
+        <br>Net Present Value
+      <span id="npv">
+      </span>
+        <br>
+          Shares (in millions) <input id="sharesinmillions" type="text" name="" value="">
+        <br>Intrinsic Value
+      <span id="intrinsicvalue">
+      </span>
+        <br>
+          Current Price <input id="currentprice" type="text" name="" value="">
+          <br>Safety Margin
+        <span id="safetymargin">
+        </span>
+          <br>
+      </div>
 <script>
   var OperCf1 = 2498728;
   var OperCf2 = 1935306;
@@ -213,4 +265,39 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
   function unhide(){
       (document.getElementById('oldstuff').hidden == false)? (document.getElementById('oldstuff').hidden = true): (document.getElementById('oldstuff').hidden = false) ;
   }
+  function hide(){
+      (document.getElementById("TODO").hidden == false)? (document.getElementById("TODO").hidden = true): (document.getElementById("TODO").hidden = false) ;
+  }
+</script>
+
+<script type="text/javascript">
+  // TODO:
+  //     As my hunt to find work continues, i will use these tools on the web to help myself.
+  //     The site must service someone, and if there are none to see this, then it must be myself.
+  //     As such, i would like the function of this page to be as follows
+  //     1. Give me the tools to, at a glance manage all functions of my internet loaning business. I currently have a snowball of
+  //     payments from David Salazar accruing. This business was backed by my knowledge in finance and old contracted lending business. (there is an extensive spreadsheet in the public folder.)
+  //     This model must be put into production!
+  //     One feature of monitoring repayment times.
+  //     One feature is an efficient frontier map. 30 yr treasury notes are 3.75%. something you can make 1 dollar to 2.7 if you invested when you were 30.
+  //     investing in the s&p500 is also a better bet
+  //     2. Design a Mechanize crawler  to go into google finance and then update a csv and update Beta Risk and Expected yearly returns of stocks
+  //     The S&P 500 average Yearly is 9 percent
+  //
+ //     He is the outlier of this model that i want to create.
+  //     what i would like to do is create a system which monitors the interest rate on a certain loan portfolio.
+  //     Interest rate is calculated by beginning investment amount.Some will be bonds and some will be personal loans.
+  //     The goal of the portfolio is to create an index of well researched stocks that are well suited for trading under very secure means.
+  //     The loan portfolio consists of individual loans with expected values, and expected paybacks. The amounts start high,
+  //     But if ammendments are made to the agreements or late fees accrue, you are penalized and must pay more. Reagreements must be made yearly
+  //     or else collatoral will be assessed.
+  //
+  //    the user view i would like is to actually see a stock live before me. let a button let me purchase that stsock with a limit buy or a regular buy.
+  //    go and get the chance to sell that stock as well.
+  //    a portfolio is created with a history of your trades. these trades build your portfolio number.
+  // There was another dream i had where i would own stocks and let people within my circle claim ownership of that stock under me. they would trade it between eachother
+  //  and every time, as i charge commission to register who truly owns it under me (and could get credit at the time they choose of withdrawal) they would collect their
+  // money from gains on the stock that they traded under me.
+
+
 </script>
