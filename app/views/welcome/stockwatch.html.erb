@@ -6,7 +6,7 @@
   </h6>
 <button type="button" name="button" onclick="hide()">TODO</button>
 <button type="button" onclick="unhide()" name="button">Show/hide the stocklist</button>
-  <div id="TODO">
+  <div id="TODO" hidden='true'>
     <input type="text" id="2du" name="" value="">
     <script type="text/javascript">
       var freeitem = "";
@@ -27,7 +27,7 @@
 
     </script>
     <button type="button" name="button" onclick="addTODO()">ADD (broken function)</button><br>
-      <div id="todoITEMS">
+      <div id="todoITEMS" >
         1.Create a free column to the left of each line of data<br>
         2. Style the items to have a better look and feel. <br>
 
@@ -67,6 +67,16 @@ Let me know if you want other metrics with stock links or anything relevant.
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
   Live data for:
 </br></br>
+  <!--  First Stock Teplate-->
+  <%= stocks = StockQuote::Stock.financials("AAPL") %>
+<br><br>  <%= stocks.financials.methods %>  </br>
+<!--  at least this area here lets me get to the quarterly statements... i have to figure out how to get to the annual statements.. thats what i need.
+https://iextrading.com/developer/docs/#financials is the resource for all the extentions i need...
+there are many more values in this system that i need to be able to pull at a moment's glance.. keep working on this. 
+-->
+  </br></br>
+  <!--  Stock Template End -->
+
   <!--  First Stock Teplate-->
   <% stocks = StockQuote::Stock.quote("FSLR") %>
   <%= stocks.symbol %>  </br>
@@ -128,11 +138,9 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
 <div class="module">
 </div>
 </div>
-<div class="row">
-  <div class="column"></div>
       <div id="intrinsicCalc" >
         Note: things that need updating. Live numbers to be updated.
-        update stock metrics button needs a function.
+        update stock metrics button needs a function.<br>
         numbers need to be formatted better
         <input type="text" name="changeStock" value="" placeholder="Enter Stock Here">
         <button type="button" name="button" onclick="" >Update Stock Metrics</button>
@@ -185,10 +193,6 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
         </span>
           <br>
       </div>
-      <div class="column"></div>
-
-      <div class="column"></div>
-    </div>
 <script>
   var OperCf1 = 2498728;
   var OperCf2 = 1935306;
@@ -291,6 +295,9 @@ document.getElementById('date').value = new Date().toJSON().slice(0,10).replace(
   //    the user view i would like is to actually see a stock live before me. let a button let me purchase that stsock with a limit buy or a regular buy.
   //    go and get the chance to sell that stock as well.
   //    a portfolio is created with a history of your trades. these trades build your portfolio number.
+  // There was another dream i had where i would own stocks and let people within my circle claim ownership of that stock under me. they would trade it between eachother
+  //  and every time, as i charge commission to register who truly owns it under me (and could get credit at the time they choose of withdrawal) they would collect their
+  // money from gains on the stock that they traded under me.
 
 
 </script>
