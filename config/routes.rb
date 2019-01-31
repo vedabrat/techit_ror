@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
   get 'welcome/beer'
+  get 'welcome/beerbrewer'
   get 'welcome/clicker'
   get 'welcome/CreditCardSystem'
   get 'welcome/directory'
@@ -34,7 +35,9 @@ Rails.application.routes.draw do
   get 'welcome/script'
   get 'welcome/sisterSites'
   get 'welcome/stockwatch'
+  get 'welcome/stockissuance'
   get 'welcome/tictactoe'
+  get 'welcome/thivashnee'
   get 'welcome/ticket_handeling'
   get 'welcome/tickets'
   get 'welcome/topgolf_letsdothis'
