@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'welcome/CreditCardSystem'
   get 'welcome/customer_cash_receipt'
   get 'welcome/directory'
+  get 'welcome/8ball'
   get 'welcome/funeralsupport'
   get 'welcome/grow'
   get 'welcome/ideas'
