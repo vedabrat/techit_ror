@@ -37,6 +37,9 @@
     // document.getElementById(card).height = "100%";
   }
   function showAll(card){
+    document.getElementById(card).width = document.getElementById(card).width/13
+    document.getElementById(card).height = document.getElementById(card).height/13
+ 
     for (var i = 0; i < all.length; i++) {
       document.getElementById(all[i]).hidden = true;
       document.getElementById(all[i]).hidden = false;
