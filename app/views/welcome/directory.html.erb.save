@@ -1,0 +1,117 @@
+<h4>
+Directory
+</h4>
+
+<%= link_to 'careers/welcome', careers_welcome_path %>
+<br>
+<%= link_to 'careers/upload_resume', careers_upload_resume_path %>
+<br>
+<%= link_to  'careers/upload_resume', careers_upload_resume_path %>
+<br>
+<%= link_to  'careers/your_info', careers_your_info_path %>
+<br>
+<%= link_to  'careers/gen_q' , careers_gen_q_path %>
+<br>
+<%= link_to  'careers/job_spec_q', careers_job_spec_q_path %>
+<br>
+<%= link_to  'careers/_header', careers__header_path %>
+<br>
+<%= link_to  'careers/_footer', careers__footer_path %>
+<br>
+<%= link_to  'careers/ed_exp', careers_ed_exp_path %>
+<br>
+<%= link_to  'careers/add1', careers_add1_path %>
+<br>
+<%= link_to  'careers/add2', careers_add2_path %>
+<br>
+<%= link_to  'careers/waiv', careers_waiv_path %>
+<br>
+<%= link_to  'careers/review_sub', careers_review_sub_path %>
+
+<br>
+<br>
+
+<%= link_to  'welcome/about', welcome_about_path %>
+<br>
+<%= link_to  'welcome/beer', welcome_beer_path %>
+<br>
+<%= link_to  'welcome/beerbrewer', welcome_beerbrewer_path %>
+<br>
+<%= link_to  'welcome/clicker', welcome_clicker_path %>
+<br>
+<%= link_to  'welcome/CreditCardSystem', welcome_CreditCardSystem_path %>
+<br>
+<%= link_to  'welcome/directory', welcome_directory_path %>
+<br>
+<%= link_to  'welcome/funeralsupport', welcome_funeralsupport_path %>
+<br>
+<%= link_to  'welcome/grow', welcome_grow_path %>
+<br>
+<%= link_to  'welcome/beer', welcome_beer_path %>
+<br>
+<%= link_to  'welcome/ideas', welcome_ideas_path %>
+<br>
+<%= link_to  'welcome/index', welcome_index_path %>
+<br>
+<%= link_to  'welcome/interviews', welcome_interviews_path %>
+<br>
+<%= link_to  'welcome/invest', welcome_invest_path %>
+<br>
+<%= link_to  'welcome/loan', welcome_loan_path %>
+<br>
+<%= link_to  'welcome/mailinglistdnp', welcome_mailinglistdnp_path %>
+<br>
+<%= link_to  'welcome/musicClasses', welcome_musicClasses_path %>
+<br>
+<%= link_to  'welcome/networking', welcome_networking_path %>
+<br>
+<%= link_to  'welcome/njmj_letsdothis', welcome_njmj_letsdothis_path%>
+<br>
+<%= link_to  'welcome/njmj', welcome_njmj_path %>
+<br>
+<%= link_to  'welcome/pricing', welcome_pricing_path %>
+<br>
+<%= link_to  'welcome/script', welcome_script_path %>
+<br>
+<%= link_to  'welcome/sisterSites', welcome_sisterSites_path %>
+<br>
+<%= link_to  'welcome/stockwatch', welcome_stockwatch_path %>
+<br>
+<%= link_to  'welcome/stokissuance', welcome_stockissuance_path %>
+<br>
+<%= link_to  'welcome/sushiyAnand', welcome_sushiyAnand_path %>
+<br>
+<%= link_to  'welcome/tictactoe', welcome_tictactoe_path %>
+<br>
+<%= link_to  'welcome/ticket_handeling', welcome_ticket_handeling_path %>
+<br>
+<%= link_to  'welcome/topgolf_letsdothis', welcome_topgolf_letsdothis_path %>
+<br>
+<%= link_to  'welcome/topgolf', welcome_topgolf_path %>
+<br>
+<%= link_to  'welcome/value', welcome_value_path %>
+<br>
+<%= link_to  'welcome/VedaAnandFinancialAdvisorSurvey', welcome_VedaAnandFinancialAdvisorSurvey_path %>
+<br>
+<%= link_to  'welcome/tickets', welcome_tickets_path %>
+<br>
+<%= link_to  'welcome/wine_budgeting', welcome_wine_budgeting_path %>
+<br>
+<%= link_to  'welcome/WIPuns', welcome_WIPuns_path %>
+<br>
+<%= link_to  'welcome/your_6_week_dev', welcome_your_6_week_dev_path %>
+<br>
+<%= link_to  'welcome/customer_cash_receipt', welcome_customer_cash_receipt_path %>
+<br>
+<%= link_to  'welcome/job_board', welcome_job_board_path %>
+<br>
+<%= link_to  'welcome/customer_ticket', welcome_customer_ticket_path %>
+<br>
+<%= link_to  'welcome/timesheet_for_employees', welcome_timesheet_for_employees_path %>
+<br>
+<%= link_to  'welcome/timesheet_for_employer', welcome_timesheet_for_employer_path %>
+
+
+<div class="footer_text">Updated 2019.3
+
+</div>
