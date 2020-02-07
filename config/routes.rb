@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get 'welcome/script'
   get 'welcome/sisterSites'
   get 'welcome/stockwatch'
+  get 'welcome/scrumPoker'
   get 'welcome/stockissuance'
   get 'welcome/tictactoe'
   get 'welcome/thivashnee'

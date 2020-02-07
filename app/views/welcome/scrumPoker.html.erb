@@ -1,0 +1,44 @@
+<h1 id="title">ScrumPoker</h1>
+
+
+<div id="imageset">
+  <img id="0" src="/img/0.svg" width="65" height="130" onclick="select(0)"/>
+  <img id="1" src="/img/1.svg" width="65" height="130" onclick="select(1)" />
+  <img id="2" src="/img/2.svg" width="65" height="130" onclick="select(2)" />
+  <img id="3" src="/img/3.svg" width="65" height="130" onclick="select(3)" />
+  <img id="5" src="/img/5.svg" width="65" height="130" onclick="select(5)" />
+  <img id="8" src="/img/8.svg" width="65" height="130" onclick="select(8)" />
+  <img id="13" src="/img/13.svg" width="65" height="130" onclick="select(13)" />
+  <img id="21" src="/img/21.svg" width="65" height="130" onclick="select(21)" />
+  <img id="34" src="/img/34.svg" width="65" height="130" onclick="select(34)" />
+  <img id="55" src="/img/55.svg" width="65" height="130" onclick="select(55)" />
+  <img id="infinity" src="/img/infinity.svg" width="65" height="130" onclick="select(infinity)" />
+  <img id="idk" src="/img/idk.svg" width="65" height="130" onclick="select(idk)" />
+
+</div>
+
+<script type="text/javascript">
+var all = ['0','1','2','3','5','8','13','21','34','55','infinity','idk']
+
+function select(id){
+  function hideAll(id){
+    for (i=0;i<all.length;i++){
+      document.getElementById(all[i]).hidden = true;
+      document.getElementById(all[i]).onclick = "showAll("+id+")";
+    }
+  }
+  hideAll()
+  function change(id){
+    document.getElementById(id).onclick = "showAll("+id+")";
+    document.getElementById(id).hidden = false;
+  }
+  change(id)
+}
+function showAll(id){
+  for (i=0;i<all.length;i++){
+    document.getElementById(all[i]).hidden = false;
+  }
+
+  document.getElementById(id).onclick = "select(id)";
+}
+</script>
