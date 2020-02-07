@@ -26,7 +26,7 @@
   }
   function showOne(card){
     // first hide all
-    for (var i = 0; i < all.length; i++) {
+    for (var i = 0; i < all.length-1; i++) {
       document.getElementById(all[i]).hidden = true;
     }
     // then just show one
@@ -36,7 +36,7 @@
     // document.getElementById(card).height = "100%";
   }
   function showAll(card){
-    for (var i = 0; i < all.length; i++) {
+    for (var i = 0; i < all.length-1; i++) {
       document.getElementById(all[i]).hidden = true;
       document.getElementById(all[i]).hidden = false;
       // document.getElementById(card).width = '7.1%';
