@@ -18,27 +18,29 @@
 </div>
 
 <script type="text/javascript">
-var all = ['0','1','2','3','5','8','13','21','34','55','infinity','idk']
-
-function select(id){
-  function hideAll(id){
-    for (i=0;i<all.length;i++){
+  var all = ['0','1','2','3','5','8','13','21','34','55','infinity','idk']
+  var clickTracker = 0;
+  function select(card){
+    clickTracker++;
+    (clickTracker%2 == 1)? showOne(card):(showAll(card));
+  }
+  function showOne(card){
+    // first hide all
+    for (var i = 0; i < all.length; i++) {
       document.getElementById(all[i]).hidden = true;
-      document.getElementById(all[i]).onclick = "showAll("+id+")";
+    }
+    // then just show one
+    // and resize it to be huge!
+    document.getElementById(card).hidden = false;
+    // document.getElementById(card).width = "100%";
+    // document.getElementById(card).height = "100%";
+  }
+  function showAll(card){
+    for (var i = 0; i < all.length; i++) {
+      document.getElementById(all[i]).hidden = true;
+      document.getElementById(all[i]).hidden = false;
+      // document.getElementById(card).width = '7.1%';
+      // document.getElementById(card).height = '7.1%';
     }
   }
-  hideAll()
-  function change(id){
-    document.getElementById(id).onclick = "showAll("+id+")";
-    document.getElementById(id).hidden = false;
-  }
-  change(id)
-}
-function showAll(id){
-  for (i=0;i<all.length;i++){
-    document.getElementById(all[i]).hidden = false;
-  }
-
-  document.getElementById(id).onclick = "select(id)";
-}
 </script>
