@@ -32,14 +32,14 @@
     // then just show one
     // and resize it to be huge!
     document.getElementById(card).hidden = false;
-    document.getElementById(card).width += document.getElementById(card).width * 13
-    document.getElementById(card).height += document.getElementById(card).height * 13
+    
+    // The next two lines are to be used for enlargening the images... when the functionality works.
+    //document.getElementById(card).width += document.getElementById(card).width * 13
+    //document.getElementById(card).height += document.getElementById(card).height * 13
+    
     // document.getElementById(card).height = "100%";
   }
   function showAll(card){
-    document.getElementById(card).width = document.getElementById(card).width/13
-    document.getElementById(card).height = document.getElementById(card).height/13
- 
     for (var i = 0; i < all.length; i++) {
       document.getElementById(all[i]).hidden = true;
       document.getElementById(all[i]).hidden = false;
