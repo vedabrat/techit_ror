@@ -1,24 +1,28 @@
 <h1 id="title">ScrumPoker</h1>
 
 
-<div id="imageset">
-  <img id="0" src="/img/0.svg" width=7.1% height=7.1%  onclick="select(0)"/>
-  <img id="1" src="/img/1.svg" width=7.1% height=7.1%  onclick="select(1)" />
-  <img id="2" src="/img/2.svg" width=7.1% height=7.1%  onclick="select(2)" />
-  <img id="3" src="/img/3.svg" width=7.1% height=7.1%  onclick="select(3)" />
-  <img id="5" src="/img/5.svg" width=7.1% height=7.1%  onclick="select(5)" />
-  <img id="8" src="/img/8.svg" width=7.1% height=7.1%  onclick="select(8)" />
-  <img id="13" src="/img/13.svg" width=7.1% height=7.1%  onclick="select(13)" />
-  <img id="21" src="/img/21.svg" width=7.1% height=7.1%  onclick="select(21)" />
-  <img id="34" src="/img/34.svg" width=7.1% height=7.1%  onclick="select(34)" />
-  <img id="55" src="/img/55.svg" width=7.1% height=7.1%  onclick="select(55)" />
-  <img id="101" src="/img/101.svg" width=7.1101% height=7.1%  onclick="select(101)" />
-  <img id="102" src="/img/102.svg" width=7.1% height=7.1%  onclick="select(102)" />
+<div id="imageset" width=100% height=100%>
+  <script type="text/javascript">
+    //Naming conventions for the id's and filenames on the server below are that all id's must be numerical
+  </script>
+  <img id="0" src="/img/scrumPoker/0.svg" width=7.1% height=7.1%  onclick="select(0)"/>
+  <img id="1" src="/img/scrumPoker/1.svg" width=7.1% height=7.1%  onclick="select(1)" />
+  <img id="2" src="/img/scrumPoker/2.svg" width=7.1% height=7.1%  onclick="select(2)" />
+  <img id="3" src="/img/scrumPoker/3.svg" width=7.1% height=7.1%  onclick="select(3)" />
+  <img id="5" src="/img/scrumPoker/5.svg" width=7.1% height=7.1%  onclick="select(5)" />
+  <img id="8" src="/img/scrumPoker/8.svg" width=7.1% height=7.1%  onclick="select(8)" />
+  <img id="13" src="/img/scrumPoker/13.svg" width=7.1% height=7.1%  onclick="select(13)" />
+  <img id="21" src="/img/scrumPoker/21.svg" width=7.1% height=7.1%  onclick="select(21)" />
+  <img id="34" src="/img/scrumPoker/34.svg" width=7.1% height=7.1%  onclick="select(34)" />
+  <img id="55" src="/img/scrumPoker/55.svg" width=7.1% height=7.1%  onclick="select(55)" />
+  <img id="101" src="/img/scrumPoker/101.svg" width=7.1% height=7.1%  onclick="select(101)" />
+  <img id="102" src="/img/scrumPoker/102.svg" width=7.1% height=7.1%  onclick="select(102)" />
 
 </div>
 
 <script type="text/javascript">
   var all = ['0','1','2','3','5','8','13','21','34','55','101','102']
+  var width = document.getElementById(0).width
   var clickTracker = 0;
   function select(card){
     clickTracker++;
@@ -30,21 +34,20 @@
       document.getElementById(all[i]).hidden = true;
     }
     // then just show one
-    // and resize it to be huge!
     document.getElementById(card).hidden = false;
-    
-    // The next two lines are to be used for enlargening the images... when the functionality works.
-    //document.getElementById(card).width += document.getElementById(card).width * 13
-    //document.getElementById(card).height += document.getElementById(card).height * 13
-    
-    // document.getElementById(card).height = "100%";
+    // and resize it to be huge!
+    // Enlargen the image
+    document.getElementById(card).width += document.getElementById(card).width * 13
+    // document.getElementById(card).height += document.getElementById(card).height * 13
   }
   function showAll(card){
+    //shrink the image
+    document.getElementById(card).width = width
+    // document.getElementById(card).height -= document.getElementById(card).height * 13
+    // Show all of the cards
     for (var i = 0; i < all.length; i++) {
       document.getElementById(all[i]).hidden = true;
       document.getElementById(all[i]).hidden = false;
-      // document.getElementById(card).width = '7.1%';
-      // document.getElementById(card).height = '7.1%';
     }
   }
 </script>
