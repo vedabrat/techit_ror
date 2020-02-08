@@ -1,29 +1,36 @@
 <h1 id="title">ScrumPoker</h1>
-
-
 <div id="imageset" width=100% height=100%>
   <script type="text/javascript">
     //Naming conventions for the id's and filenames on the server below are that all id's must be numerical
   </script>
-  <img id="0" src="/img/scrumPoker/0.svg" width=7.1% height=7.1%  onclick="select(0)"/>
-  <img id="1" src="/img/scrumPoker/1.svg" width=7.1% height=7.1%  onclick="select(1)" />
-  <img id="2" src="/img/scrumPoker/2.svg" width=7.1% height=7.1%  onclick="select(2)" />
-  <img id="3" src="/img/scrumPoker/3.svg" width=7.1% height=7.1%  onclick="select(3)" />
-  <img id="5" src="/img/scrumPoker/5.svg" width=7.1% height=7.1%  onclick="select(5)" />
-  <img id="8" src="/img/scrumPoker/8.svg" width=7.1% height=7.1%  onclick="select(8)" />
-  <img id="13" src="/img/scrumPoker/13.svg" width=7.1% height=7.1%  onclick="select(13)" />
-  <img id="21" src="/img/scrumPoker/21.svg" width=7.1% height=7.1%  onclick="select(21)" />
-  <img id="34" src="/img/scrumPoker/34.svg" width=7.1% height=7.1%  onclick="select(34)" />
-  <img id="55" src="/img/scrumPoker/55.svg" width=7.1% height=7.1%  onclick="select(55)" />
-  <img id="101" src="/img/scrumPoker/101.svg" width=7.1% height=7.1%  onclick="select(101)" />
-  <img id="102" src="/img/scrumPoker/102.svg" width=7.1% height=7.1%  onclick="select(102)" />
+  <img id="0" src="/img/scrumPoker/0.svg" width=30% height=30%  onclick="select(0)"/>
+  <img id="102" src="/img/scrumPoker/102.svg" width=30% height=30%  onclick="select(102)" />
+  <img id="1" src="/img/scrumPoker/1.svg" width=30% height=30%  onclick="select(1)" />
+  <br>
+  <img id="2" src="/img/scrumPoker/2.svg" width=30% height=30%  onclick="select(2)" />
+  <img id="3" src="/img/scrumPoker/3.svg" width=30% height=30%  onclick="select(3)" />
+  <img id="5" src="/img/scrumPoker/5.svg" width=30% height=30%  onclick="select(5)" />
+  <br>
+  <img id="8" src="/img/scrumPoker/8.svg" width=30% height=30%  onclick="select(8)" />
+  <img id="13" src="/img/scrumPoker/13.svg" width=30% height=30%  onclick="select(13)" />
+  <img id="21" src="/img/scrumPoker/21.svg" width=30% height=30%  onclick="select(21)" />
+  <br>
+  <img id="34" src="/img/scrumPoker/34.svg" width=30% height=30%  onclick="select(34)" />
+  <img id="55" src="/img/scrumPoker/55.svg" width=30% height=30%  onclick="select(55)" />
+  <img id="101" src="/img/scrumPoker/101.svg" width=30% height=30%  onclick="select(101)" />
 
 </div>
 
 <script type="text/javascript">
+
+
   var all = ['0','1','2','3','5','8','13','21','34','55','101','102']
-  var width = document.getElementById(0).width
+  var width = get(0).width
+  var height = get(0).height
   var clickTracker = 0;
+  function get(b){
+    return document.getElementById(b)
+  }
   function select(card){
     clickTracker++;
     (clickTracker%2 == 1)? showOne(card):(showAll(card));
@@ -31,23 +38,31 @@
   function showOne(card){
     // first hide all
     for (var i = 0; i < all.length; i++) {
-      document.getElementById(all[i]).hidden = true;
+      get(all[i]).hidden = true;
     }
     // then just show one
-    document.getElementById(card).hidden = false;
+    get(card).hidden = false;
     // and resize it to be huge!
     // Enlargen the image
-    document.getElementById(card).width += document.getElementById(card).width * 13
-    // document.getElementById(card).height += document.getElementById(card).height * 13
+    get(card).width += get(card).width * 1.8
+    // get(card).height += get(card).height * 1
+
+    //hide the title
+    // get(title).hidden = true
   }
   function showAll(card){
     //shrink the image
-    document.getElementById(card).width = width
-    // document.getElementById(card).height -= document.getElementById(card).height * 13
+    get(card).width = width
+    // show the title
+    // get(title).hidden = false
     // Show all of the cards
     for (var i = 0; i < all.length; i++) {
-      document.getElementById(all[i]).hidden = true;
-      document.getElementById(all[i]).hidden = false;
+      get(all[i]).hidden = true;
+      get(all[i]).hidden = false;
     }
   }
+  function hideTitle(){
+    get("title").hidden = true
+  }
+  setTimeout(hideTitle,3000)
 </script>
