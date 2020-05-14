@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'welcome/networking'
   get 'welcome/njmj_letsdothis'
   get 'welcome/njmj'
+  get 'welcome/pagrow'
   get 'welcome/pricing'
   get 'welcome/script'
   get 'welcome/sisterSites'
