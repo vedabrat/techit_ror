@@ -1,0 +1,91 @@
+<html>
+<head>
+    <!--  Bootstrap CSS jQuery and Javascript  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>
+        Inspect PowerPoint Generator
+    </title>
+</head>
+<body style="background-color:rgb(31, 42, 68)">
+<div id="wrapper">
+    <div>
+        <img src="PW_SM_EagleLogo_Tagline-WT_RGB_.png">
+        <h2>PW Inspect</h2>
+        <h2>Report Builder</h2>
+    </div>
+    <div>
+        <form action="/reports/ppt/api" method="get">
+            <b><label >Powerpoint Settings</label></b><br>
+
+            <br>
+            <em>Enter at least one parameter below</em><br>
+
+            <label for="eventID">Event ID:</label>
+            <input type="text" id="eventID" name="eventID" required><br>
+
+            <label for="event">Inspection Event Name:</label>
+            <input type="text" id="event" name="event"><br>
+
+            <label for="part">Part Number:</label>
+            <input type="text" id="part" name="part"><br>
+
+            <label for="esn">Engine Serial Number:</label>
+            <input type="text" id="esn" name="esn"><br>
+
+            <label for="engProgram">Engine Program:</label>
+            <input type="text" id="engProgram" name="engProgram"><br>
+
+            <label for="serial">Part Serial Number:</label>
+            <input type="text" id="serial" name="serial"><br>
+
+            <label for="partName">Part Name:</label>
+            <input type="text" id="partName" name="partName"><br>
+
+            <label for="techdataID">Techdata ID:</label>
+            <input type="text" id="techdataID" name="techdataID"><br>
+
+
+            <span title="Disables the limit of 13 slides per Part Number, Serial Number, and Measurement Slides in the PowerPoint output">
+            <label for="limit">Disable Slide Limit:</label>
+            <input type="checkbox" id="limit" name="limit">
+            </span>
+
+            <button class="button" type="submit">
+                Generate Powerpoint
+            </button>
+        </form>
+
+        <script>
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        /*
+                        {
+                        const inputs = Array.from(document.querySelectorAll('input[name=eventID], input[name=event]'));
+                        const inputListener = e => inputs.filter(i => i !== e.target).forEach(i => i.required = !e.target.value.length);
+
+                        inputs.forEach(i => i.addEventListener('input', inputListener));
+                        }
+                        {
+                        const inputs = Array.from(document.querySelectorAll('input[name=part], input[name=esn], input[name=engProgram], input[name=serial], input[name=partName]'));
+                        const inputListener = e => inputs.filter(i => i !== e.target).forEach(i => i.required = !e.target.value.length);
+
+                        inputs.forEach(i => i.addEventListener('input', inputListener));
+                        }
+                        */
+                        {
+                        const inputs = Array.from(document.querySelectorAll('input[name=eventID], input[name=event], input[name=part], input[name=esn], input[name=engProgram], input[name=serial], input[name=partName]'));
+                        const inputListener = e => inputs.filter(i => i !== e.target).forEach(i => i.required = !e.target.value.length);
+
+                        inputs.forEach(i => i.addEventListener('input', inputListener));
+                        }
+                    });
+
+
+        </script>
+
+    </div>
+</div>
+</body>
+</html>
