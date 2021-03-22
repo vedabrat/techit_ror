@@ -39,6 +39,8 @@ Rails.application.routes.draw do
   get 'welcome/njmj'
   get 'welcome/pasales'
   get 'welcome/pricing'
+  get 'welcome/harmonium_lessons_v1'
+
   get 'welcome/script'
   get 'welcome/sisterSites'
   get 'welcome/stockwatch'
@@ -51,6 +53,7 @@ Rails.application.routes.draw do
   get 'welcome/tickets'
   get 'welcome/timesheet_for_employees'
   get 'welcome/timesheet_for_employer'
+  get 'welcome/treecutting'
   get 'welcome/customer_ticket'
   get 'welcome/topgolf_letsdothis'
   get 'welcome/topgolf'
