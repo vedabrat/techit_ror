@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   get 'welcome/sushiyAnand'
   get 'welcome/scrumPoker'
   get 'welcome/stockissuance'
+  get 'welcome/thyme_contest'
   get 'welcome/tictactoe'
   get 'welcome/thivashnee'
   get 'welcome/ticket_handeling'
