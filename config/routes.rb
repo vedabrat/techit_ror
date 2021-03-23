@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'careers/ed_exp'
   get 'careers/add1'
   get 'careers/add2'
+  get 'careers/careers_home'
   get 'careers/waiv'
   get 'careers/review_sub'
   root 'welcome#index'
