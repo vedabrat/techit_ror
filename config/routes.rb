@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get 'welcome/pasales'
   get 'welcome/pricing'
   get 'welcome/harmonium_lessons_v1'
+  get 'welcome/tablalessonv1'
 
   get 'welcome/script'
   get 'welcome/sisterSites'
