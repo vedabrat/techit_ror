@@ -43,7 +43,7 @@ end
 
 group :production do
   gem "pg"
-  gem 'puma', '~> 3.7'
+  gem 'puma', '~> 4.3'
 end
 
 group :development do
