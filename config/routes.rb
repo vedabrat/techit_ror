@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   get 'welcome/pasales'
   get 'welcome/pricing'
   get 'welcome/rental_agreement'
-  get 'rubyCodewarsCollection'
+  get 'welcome/rubyCodewarsCollection'
   get 'welcome/harmonium_lessons_v1'
   get 'welcome/tablalessonv1'
   get 'welcome/script'
