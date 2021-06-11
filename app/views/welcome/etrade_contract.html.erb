@@ -1,7 +1,8 @@
 
 <body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p align="center" style="margin-bottom: 0in; line-height: 100%">
 Etrade Acceptable Use Agreement</p>
-<p style="margin-bottom: 0in; line-height: 100%">Date: <%= Date.today %>
+<p style="margin-bottom: 0in; line-height: 100%">Date:
+	<%= Date.today %>
 </p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
@@ -68,11 +69,24 @@ parties.
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
-<p style="margin-bottom: 0in; line-height: 100%">By clicking submit, I,
-_____________________ authorize Vedabrat Etwaru and any of his
-associates to the use of my Etrade account as set forth in the terms
-described in this document. This authorization serves as an
-E-signature.</p>
+<form action="https://getsimpleform.com/messages?form_api_token=42e4f12338e3a9d957a31fa298211e13" method="post">
+<p style="margin-bottom: 0in; line-height: 100%">By clicking send, I,</p>
+	<div class="hiddenForm" hidden="true">
+		<input type="text" name="Etrade_agreement_rate" value="30%">
+		<input type="text" name="Date" value="<%= Date.today %>">
+	</div>
+		<label hidden=true >Name</label>
+		<input type="text" name='name' class="form-control" placeholder="Your full name" id="name" required data-validation-required-message="Please enter your name.">
+
+		<p style="margin-bottom: 0in; line-height: 100%"> authorize Vedabrat Etwaru and any of his
+		associates to the use of my Etrade account as set forth in the terms
+		described in this document. This authorization serves as an
+		E-signature.
+		<br/>
+		</p>
+		<button type="submit" class="btn btn-success btn-lg">Send</button>
+
+</form>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
