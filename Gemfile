@@ -25,10 +25,14 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'stock_quote' #for welcome/stockwatch
-
+gem 'sms-easy'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'spree', '~> 4.2'
+gem 'spree_auth_devise', '~> 4.3'
+gem 'spree_gateway', '~> 3.9'
+gem 'spree_i18n', '~> 5.0'
+gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' # only needed for MacOS and Ruby 3.0
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

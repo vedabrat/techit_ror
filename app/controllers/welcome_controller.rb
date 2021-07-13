@@ -1,12 +1,13 @@
 class WelcomeController < ApplicationController
-  
+
   def about
   end
 
   def clicker
   end
 
-  def CreditCardSystem
+  def creditCardSystem
+    print "A user has arrived"
   end
 
   def grow
