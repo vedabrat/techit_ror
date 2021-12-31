@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get 'welcome/interviews'
   get 'welcome/invest'
   get 'welcome/job_board'
+  get 'welcome/jarbal'
   get 'welcome/loan'
   get 'welcome/mailinglistdnp'
   get 'welcome/meetingOrganization'
