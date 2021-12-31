@@ -10,6 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_06_18_073853) do
+
+  create_table "sp500s", force: :cascade do |t|
+    t.string "symbol"
+    t.float "beta"
+    t.float "dividend"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

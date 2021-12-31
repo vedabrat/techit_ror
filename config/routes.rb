@@ -67,5 +67,6 @@ Rails.application.routes.draw do
   get 'welcome/wine_budgeting'
   get 'welcome/WIPuns'
   get 'welcome/your_6_week_dev'
+  get 'statistics/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

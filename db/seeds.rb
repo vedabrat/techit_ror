@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+100.times {Sp500.create ({
+  symbol : (rand()>rand())?Rand(A..Z):""+(rand()>rand())?Rand(A..Z):""+(rand()>rand())?Rand(A..Z):""+(rand()>rand())?Rand(A..Z):"",
+  beta : rand(-9..5)
+  dividend : rand(0-.1)
+  })
+  }
